@@ -4,75 +4,155 @@
 
 <style>
 
-#animation-container {
-animation: inout 3s;
-animation-iteration-count: infinite;
--webkit-animation: inout 3s; /* Safari & Chrome */
--webkit-animation-iteration-count: infinite;
-margin: auto;
-}
 
-@keyframes inout {
-0%   { transform: scale(0, 0); }
-25%   { transform: scale(2, 2); }
-50%   { transform: scale(0, 0); }
-100%  { transform: scale(1, 1); }
-}
-
-@-webkit-keyframes inout { /* Safari & Chrome */
-0%   { -webkit-transform: scale(0, 0); }
-25%  { -webkit-transform: scale(2, 2); }
-50%  { -webkit-transform: scale(0, 0); }
-100% { -webkit-transform: scale(1, 1); }
+body {
+  background-color: black;
 }
 
 
-.inner-circle {
-
-background: yellow;
-height: 500px;
-width: 500px;
+@-webkit-keyframes rotate-skull {
+    0% {
+        -webkit-transform: translateY(10px)
+    }
+    50% {
+        -webkit-transform: translateY(30px)
+    }
+    100% {
+        -webkit-transform: translateY(10px)
+    }
 }
 
 
-
-#skull
+.figure_head
 {
     height: 100px;
     width: 100px;
-    background: orange;
-    -ms-animation-name: rotate-skull;
-    -ms-animation-duration: 7s;
-    -ms-animation-iteration-count: infinite;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius:99px;
+
+    /* This is the animation */
+    -webkit-animation-name: rotate-skull;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
 }
 
 
-@-ms-keyframes rotate-skull {
-    0% {
-        -ms-transform: rotate(0deg)
-    }
-    25% {
-        -ms-transform: rotate(15deg)
-    }
-    50% {
-        -ms-transform: rotate(-5deg)
-    }
-    55% {
-        -ms-transform: rotate(0deg)
-    }
-    75% {
-        -ms-transform: rotate(-10deg)
-    }
-    100% {
-        -ms-transform: rotate(0deg)
-    }
+.figure_body{
+    height: 250px;
+    width: 250px;
+    background: green;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 249;
+}
+
+
+.figure_container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    padding: 20px;
+    background: black;
+}
+.figure_hand{
+    height: 70px;
+    width: 70px;
+    background: white;
+    margin-top: 20px;
+    -webkit-border-radius:99px;
+}
+
+.figure_left_hand{
+    float: left;
+}
+.figure_right_hand{
+    float: right;
+}
+
+.figure_feet{
+    clear: both;
+}
+
+.figure_foot{
+    height: 70px;
+    width: 70px;
+    background: white;
+    margin-top: 60px;
+    -webkit-border-radius:99px;
+}
+
+.figure_left_foot{
+    float: left;
+    margin-left: -10px;
+}
+.figure_right_foot{
+    float: right;
+    margin-right: -10px;
+}
+
+
+/* Figure eyes */
+.figure_horns{
+    clear: both;
+}
+
+.figure_horn{
+    background: rgb(137, 226, 94);
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius:99px;
+}
+
+.figure_left_horn{
+    float: left;
+}
+
+.figure_right_horn{
+     float: right;
+}
+
+/* Figure horns */
+
+.figure_eyes{
+    clear: both;
+    padding-top: 10px;
+}
+
+.figure_eye{
+    background: rgb(168, 168, 168);
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 99px;
+}
+
+.figure_left_eye{
+    float: left;
+    margin-left: 20px;
+}
+
+.figure_right_eye{
+     float: right;
+     margin-right: 20px;
+}
+
+
+/** nose **/
+.figure_nose{
+    background: rgb(62, 46, 146);
+    clear: both;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 99px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 </style>
 
-
 <script>
-
+//http://www.css3files.com/transform/
 </script>
 
 
@@ -84,16 +164,29 @@ width: 500px;
 
 
 
-
-<div id="skull">
-Hello
-</div>
-
-
-<div id="animation-container">
-
-<div class="inner-circle">
-</div>
+<div class="figure_container">
+    <div class="figure_head">
+        <div class="figure_horns">
+            <div class="figure_horn figure_left_horn"></div>
+            <div class="figure_horn figure_right_horn"></div>
+        </div>
+        <div class="figure_eyes">
+            <div class="figure_eye figure_left_eye"></div>
+            <div class="figure_eye figure_right_eye"></div>
+        </div>
+        <div class="figure_nose">
+        </div>
+    </div>
+    <div class="figure_body">
+        <div class="figure_hands">
+            <div class="figure_hand figure_left_hand"></div>
+            <div class="figure_hand figure_right_hand"></div>
+        </div>
+        <div class="figure_feet">
+            <div class="figure_foot figure_left_foot"></div>
+            <div class="figure_foot figure_right_foot"></div>
+        </div>
+    </div>
 
 </div>
 
