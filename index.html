@@ -3,31 +3,37 @@
 
 
 <style>
-/* This is the animation code. */
-@-webkit-keyframes example {
-   from { transform: scale(2.0); }
-   to   { transform: scale(1.0); }
+
+#animation-container {
+animation: inout 3s;
+animation-iteration-count: infinite;
+-webkit-animation: inout 3s; /* Safari & Chrome */
+-webkit-animation-iteration-count: infinite;
+margin: auto;
+}
+
+@keyframes inout {
+0%   { transform: scale(0, 0); }
+25%   { transform: scale(2, 2); }
+50%   { transform: scale(0, 0); }
+100%  { transform: scale(1, 1); }
+}
+
+@-webkit-keyframes inout { /* Safari & Chrome */
+0%   { -webkit-transform: scale(0, 0); }
+25%  { -webkit-transform: scale(2, 2); }
+50%  { -webkit-transform: scale(0, 0); }
+100% { -webkit-transform: scale(1, 1); }
 }
 
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(30deg); }
-  50% { transform: rotate(120deg); }
-  100% { transform: rotate(360deg); }
+.inner-circle {
+
+background: yellow;
+height: 500px;
+width: 500px;
 }
 
-
-
-/* This is the element that we apply the animation to. */
-div.__head {
-  background: yellow;
-  width: 100px;
-  height: 100px;
-  animation-name: spin;
-  animation-duration: 3s;
-  animation-iteration-count: 10;
-}
 
 </style>
 
@@ -43,9 +49,14 @@ div.__head {
 
 </body>
 
-<div class="__head">
-O
+<div id="animation-container">
+
+<div class="inner-circle">
 </div>
+
+</div>
+
+
 
 
 </html>
