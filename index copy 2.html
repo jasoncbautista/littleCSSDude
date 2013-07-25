@@ -19,11 +19,16 @@
 }
 
 
-#skull
+.head
 {
     height: 100px;
     width: 100px;
-    background: orange;
+    background: brown;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius:99px;
+
+
     -webkit-animation-name: rotate-skull;
     -webkit-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
@@ -31,6 +36,11 @@
 
 
 
+.figureContainer{
+    width: 400px;
+
+    background: black;
+}
 
 </style>
 
@@ -47,11 +57,10 @@
 
 
 
-
-<div id="skull">
-Hello
+<div class="figureContainer">
+    <div class="head">
+    </div>
 </div>
-
 
 
 </html>
