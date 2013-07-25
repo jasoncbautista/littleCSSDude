@@ -8,37 +8,46 @@
 
 @-webkit-keyframes rotate-skull {
     0% {
-        -webkit-transform: translateY(0px)
-    }
-    50% {
         -webkit-transform: translateY(10px)
     }
+    50% {
+        -webkit-transform: translateY(30px)
+    }
     100% {
-        -webkit-transform: translateY(0px)
+        -webkit-transform: translateY(10px)
     }
 }
 
 
-.head
+.figure_head
 {
     height: 100px;
     width: 100px;
-    background: brown;
+    background: white;
     margin-left: auto;
     margin-right: auto;
     -webkit-border-radius:99px;
 
-
+    /* This is the animation */
     -webkit-animation-name: rotate-skull;
     -webkit-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
 }
 
 
+.figure_body{
+    height: 250px;
+    width: 250px;
+    background: brown;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 249;
+}
 
-.figureContainer{
+
+.figure_container{
     width: 400px;
-
+    padding: 20px;
     background: black;
 }
 
@@ -57,9 +66,9 @@
 
 
 
-<div class="figureContainer">
-    <div class="head">
-    </div>
+<div class="figure_container">
+    <div class="figure_head"></div>
+    <div class="figure_body"></div>
 </div>
 
 
