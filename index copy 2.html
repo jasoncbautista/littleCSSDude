@@ -38,7 +38,7 @@
 .figure_body{
     height: 250px;
     width: 250px;
-    background: brown;
+    background: green;
     margin-left: auto;
     margin-right: auto;
     -webkit-border-radius: 249;
@@ -46,10 +46,94 @@
 
 
 .figure_container{
+    margin-left: auto;
+    margin-right: auto;
     width: 400px;
     padding: 20px;
     background: black;
 }
+.figure_hand{
+    height: 70px;
+    width: 70px;
+    background: white;
+    margin-top: 20px;
+    -webkit-border-radius:99px;
+}
+
+.figure_left_hand{
+    float: left;
+}
+.figure_right_hand{
+    float: right;
+}
+
+.figure_feet{
+    clear: both;
+}
+
+.figure_foot{
+    height: 70px;
+    width: 70px;
+    background: white;
+    margin-top: 60px;
+    -webkit-border-radius:99px;
+}
+
+.figure_left_foot{
+    float: left;
+    margin-left: -10px;
+}
+.figure_right_foot{
+    float: right;
+    margin-right: -10px;
+}
+
+
+/* Figure eyes */
+.figure_horns{
+    clear: both;
+}
+
+.figure_horn{
+    background: rgb(137, 226, 94);
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius:99px;
+}
+
+.figure_left_horn{
+    float: left;
+}
+
+.figure_right_horn{
+     float: right;
+}
+
+/* Figure horns */
+
+.figure_eyes{
+    clear: both;
+    padding-top: 10px;
+}
+
+.figure_eye{
+    background: rgb(168, 168, 168);
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 99px;
+}
+
+.figure_left_eye{
+    float: left;
+    margin-left: 20px;
+}
+
+.figure_right_eye{
+     float: right;
+     margin-right: 20px;
+}
+
+
 
 </style>
 
@@ -67,8 +151,27 @@
 
 
 <div class="figure_container">
-    <div class="figure_head"></div>
-    <div class="figure_body"></div>
+    <div class="figure_head">
+        <div class="figure_horns">
+            <div class="figure_horn figure_left_horn"></div>
+            <div class="figure_horn figure_right_horn"></div>
+        </div>
+        <div class="figure_eyes">
+            <div class="figure_eye figure_left_eye"></div>
+            <div class="figure_eye figure_right_eye"></div>
+        </div>
+    </div>
+    <div class="figure_body">
+        <div class="figure_hands">
+            <div class="figure_hand figure_left_hand"></div>
+            <div class="figure_hand figure_right_hand"></div>
+        </div>
+        <div class="figure_feet">
+            <div class="figure_foot figure_left_foot"></div>
+            <div class="figure_foot figure_right_foot"></div>
+        </div>
+    </div>
+
 </div>
 
 
